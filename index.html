@@ -1,0 +1,972 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日大赛视频在线观看-赛事回放_通勤追更_哪类赛程更值得看</title>
+<meta name="description" content="每日大赛视频在线观看提供赛事回放、赛程速览与项目分类入口，覆盖田径、游泳、球类与极限赛事，适合通勤追更和想找完整回放的观众，含观看指南与常见问答。">
+<meta name="keywords" content="赛事回放,赛程速览,比赛集锦,项目分类,观看指南">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f3b57'/%3E%3Cpath d='M18 44V20h6v10l10-10h8L30 32l12 12h-8L24 34v10z' fill='%23f5b642'/%3E%3C/svg%3E">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+:root{
+  --ink:#12222e;
+  --ink-2:#33475a;
+  --muted:#6b7f8f;
+  --line:#dbe4ea;
+  --line-soft:#eaf0f4;
+  --bg:#f4f7f9;
+  --panel:#ffffff;
+  --brand:#0f3b57;
+  --brand-2:#17587d;
+  --accent:#f5b642;
+  --accent-2:#e08b1f;
+  --good:#1f7a5c;
+  --radius:12px;
+  --radius-sm:8px;
+  --shadow:0 1px 2px rgba(18,34,46,.06),0 6px 18px rgba(18,34,46,.06);
+  --shadow-sm:0 1px 2px rgba(18,34,46,.05);
+  --sticky-h:104px;
+  --maxw:1360px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  font-size:15px;
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--brand-2);text-decoration:none}
+a:hover{text-decoration:underline}
+h1,h2,h3,h4{margin:0;line-height:1.35;font-weight:700}
+p{margin:0 0 10px}
+ul,ol{margin:0 0 10px;padding-left:20px}
+img,svg{max-width:100%}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* 公告条 + 页头 吸顶 */
+.sticky-top{position:sticky;top:0;z-index:60}
+.notice-bar{
+  background:linear-gradient(90deg,#0f3b57,#17587d 55%,#0f3b57);
+  color:#eaf3f9;
+  font-size:13px;
+  line-height:1;
+}
+.notice-bar .wrap{display:flex;align-items:center;gap:10px;height:36px;overflow:hidden}
+.notice-tag{
+  flex:none;background:var(--accent);color:#2a1c00;font-weight:700;
+  font-size:11px;padding:3px 7px;border-radius:4px;letter-spacing:.5px;
+}
+.notice-text{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.notice-text b{color:var(--accent);font-weight:600}
+
+.site-header{
+  background:var(--panel);
+  border-bottom:1px solid var(--line);
+  box-shadow:var(--shadow-sm);
+}
+.header-inner{
+  display:flex;align-items:center;gap:22px;
+  height:68px;
+}
+.brand{display:flex;align-items:center;gap:10px;flex:none}
+.brand-mark{width:38px;height:38px;flex:none}
+.brand-name{
+  font-size:19px;font-weight:800;color:var(--brand);letter-spacing:.4px;white-space:nowrap;
+}
+.brand-name:hover{text-decoration:none;color:var(--brand-2)}
+.header-nav{display:flex;gap:4px;flex-wrap:wrap;flex:1}
+.header-nav a{
+  font-size:13.5px;color:var(--ink-2);padding:6px 10px;border-radius:6px;white-space:nowrap;
+}
+.header-nav a:hover{background:var(--line-soft);color:var(--brand);text-decoration:none}
+.header-tools{display:flex;align-items:center;gap:10px;flex:none}
+.search-box{position:relative}
+.search-box input{
+  width:186px;height:34px;padding:0 32px 0 12px;font-size:13px;
+  border:1px solid var(--line);border-radius:17px;background:#fbfdfe;color:var(--ink);
+  outline:none;transition:.18s;
+}
+.search-box input:focus{border-color:var(--brand-2);background:#fff;box-shadow:0 0 0 3px rgba(23,88,125,.12)}
+.search-box .s-icon{
+  position:absolute;right:10px;top:50%;transform:translateY(-50%);
+  color:var(--muted);pointer-events:none;font-size:13px;
+}
+.search-feedback{
+  position:absolute;top:40px;left:0;right:0;background:#fff;border:1px solid var(--line);
+  border-radius:var(--radius-sm);box-shadow:var(--shadow);padding:8px 10px;font-size:12.5px;
+  color:var(--ink-2);display:none;z-index:70;
+}
+.search-feedback.show{display:block}
+
+/* 首屏 */
+.hero{
+  background:
+    radial-gradient(900px 340px at 82% -10%,rgba(245,182,66,.20),transparent 70%),
+    linear-gradient(160deg,#0f3b57 0%,#134a6b 58%,#17587d 100%);
+  color:#eef6fb;position:relative;overflow:hidden;
+}
+.hero-inner{
+  display:grid;grid-template-columns:1.25fr .95fr;gap:34px;align-items:center;
+  padding:38px 0 40px;
+}
+.hero-kicker{
+  display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:1.6px;
+  color:#ffd98a;text-transform:uppercase;margin-bottom:14px;
+}
+.hero-kicker::before{content:"";width:22px;height:2px;background:var(--accent);display:inline-block}
+.hero h1{
+  font-size:34px;letter-spacing:1px;color:#fff;margin-bottom:14px;
+}
+.hero-desc{font-size:14.5px;color:#cfe2ee;max-width:560px;margin-bottom:20px}
+.hero-desc b{color:#fff;font-weight:600}
+.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px}
+.btn{
+  display:inline-flex;align-items:center;gap:7px;height:38px;padding:0 18px;border-radius:19px;
+  font-size:13.5px;font-weight:600;border:1px solid transparent;cursor:pointer;transition:.18s;
+}
+.btn-primary{background:var(--accent);color:#33230a}
+.btn-primary:hover{background:#ffc95c;text-decoration:none}
+.btn-ghost{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.35);color:#eaf3f9}
+.btn-ghost:hover{background:rgba(255,255,255,.16);text-decoration:none}
+.hero-stats{display:flex;gap:26px;flex-wrap:wrap}
+.hero-stat{font-size:12.5px;color:#a9c6d8}
+.hero-stat b{display:block;font-size:20px;color:#fff;font-weight:700;letter-spacing:.5px}
+.hero-visual{position:relative}
+.hero-visual svg{display:block;width:100%;height:auto;filter:drop-shadow(0 12px 28px rgba(0,0,0,.28))}
+
+/* 主内容三栏 */
+.layout{
+  display:grid;
+  grid-template-columns:180px minmax(0,1fr) 250px;
+  gap:24px;
+  padding:26px 0 46px;
+  align-items:start;
+}
+.col-left,.col-right{position:sticky;top:calc(var(--sticky-h) + 14px)}
+.panel{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  box-shadow:var(--shadow-sm);
+}
+.side-block{padding:14px 14px 16px;margin-bottom:16px}
+.side-title{
+  font-size:12.5px;font-weight:700;color:var(--brand);letter-spacing:1px;
+  padding-bottom:9px;margin-bottom:10px;border-bottom:1px solid var(--line-soft);
+  display:flex;align-items:center;gap:6px;
+}
+.side-title::before{content:"";width:3px;height:12px;background:var(--accent);border-radius:2px}
+.channel-list{list-style:none;padding:0;margin:0}
+.channel-list li{margin-bottom:2px}
+.channel-list a{
+  display:flex;align-items:center;justify-content:space-between;gap:6px;
+  font-size:13px;color:var(--ink-2);padding:6px 8px;border-radius:6px;line-height:1.5;
+}
+.channel-list a:hover{background:#eef5f9;color:var(--brand);text-decoration:none}
+.channel-list a .cnt{font-size:11px;color:var(--muted)}
+.tag-cloud{display:flex;flex-wrap:wrap;gap:6px}
+.tag-cloud a{
+  font-size:12px;color:var(--ink-2);background:#f1f6f9;border:1px solid var(--line-soft);
+  padding:3px 8px;border-radius:12px;line-height:1.5;
+}
+.tag-cloud a:hover{background:#e3eef5;color:var(--brand);text-decoration:none}
+
+/* 中栏板块 */
+.section{margin-bottom:26px;scroll-margin-top:calc(var(--sticky-h) + 14px)}
+.section-head{
+  display:flex;align-items:flex-end;justify-content:space-between;gap:12px;
+  margin-bottom:12px;padding-bottom:9px;border-bottom:2px solid var(--line);
+}
+.section-head h2{font-size:19px;color:var(--brand);letter-spacing:.3px}
+.section-head .sub{font-size:12.5px;color:var(--muted);white-space:nowrap}
+.card-panel{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:18px 18px 16px;box-shadow:var(--shadow-sm)}
+
+/* 简介 */
+.intro-text{font-size:14.5px;color:var(--ink-2)}
+.intro-text p{margin-bottom:11px}
+.intro-text strong{color:var(--brand)}
+.intro-facts{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px;
+}
+.fact{
+  background:#f6fafc;border:1px solid var(--line-soft);border-radius:var(--radius-sm);
+  padding:9px 11px;
+}
+.fact b{display:block;font-size:15px;color:var(--brand)}
+.fact span{font-size:12px;color:var(--muted)}
+
+/* 热门卡片 */
+.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.v-card{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  padding:13px 13px 12px;display:flex;flex-direction:column;gap:7px;
+  box-shadow:var(--shadow-sm);transition:.18s;
+}
+.v-card:hover{border-color:#bcd4e2;box-shadow:var(--shadow);transform:translateY(-1px)}
+.v-card .type{
+  align-self:flex-start;font-size:11px;font-weight:600;color:#7a4a00;background:#fff1cf;
+  border:1px solid #f5dca6;padding:1px 7px;border-radius:10px;letter-spacing:.3px;
+}
+.v-card h3{font-size:14.5px;color:var(--ink);line-height:1.45}
+.v-card h3 a{color:var(--ink)}
+.v-card h3 a:hover{color:var(--brand-2);text-decoration:none}
+.v-card p{font-size:12.5px;color:var(--muted);margin:0;line-height:1.65}
+.v-card .tags{display:flex;flex-wrap:wrap;gap:5px}
+.v-card .tags span{font-size:11px;color:var(--brand-2);background:#eef5f9;padding:1px 6px;border-radius:4px}
+.v-card .meta{
+  display:flex;justify-content:space-between;font-size:11.5px;color:var(--muted);
+  border-top:1px dashed var(--line-soft);padding-top:7px;margin-top:auto;
+}
+.v-card .meta .hot{color:var(--accent-2);font-weight:600}
+
+/* 最新更新列表 */
+.up-list{list-style:none;padding:0;margin:0}
+.up-list li{
+  display:grid;grid-template-columns:64px 1fr auto;gap:12px;align-items:baseline;
+  padding:9px 2px;border-bottom:1px dashed var(--line-soft);font-size:13.5px;
+}
+.up-list li:last-child{border-bottom:none}
+.up-list .time{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+.up-list .name{font-weight:600;color:var(--ink)}
+.up-list .name a{color:var(--ink)}
+.up-list .name a:hover{color:var(--brand-2);text-decoration:none}
+.up-list .brief{font-size:12.5px;color:var(--muted);grid-column:2/4;margin-top:-2px}
+.up-list .badge{font-size:11px;color:var(--good);background:#e8f5ef;padding:1px 7px;border-radius:9px}
+
+/* 分类入口 */
+.cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.cat-item{
+  background:#f7fafc;border:1px solid var(--line-soft);border-radius:var(--radius-sm);
+  padding:11px 12px;transition:.16s;
+}
+.cat-item:hover{background:#eef5f9;border-color:#c6dbe7;text-decoration:none}
+.cat-item b{display:block;font-size:13.5px;color:var(--brand);margin-bottom:2px}
+.cat-item span{font-size:11.5px;color:var(--muted)}
+
+/* 深度解析 */
+.deep h3{font-size:15.5px;color:var(--brand);margin:16px 0 7px}
+.deep h3:first-child{margin-top:0}
+.deep p{font-size:14px;color:var(--ink-2);margin-bottom:9px}
+.deep ul{font-size:14px;color:var(--ink-2)}
+.deep li{margin-bottom:4px}
+.deep .quote{
+  border-left:3px solid var(--accent);background:#fffaf0;padding:10px 14px;
+  font-size:13.5px;color:#5b4416;border-radius:0 var(--radius-sm) var(--radius-sm) 0;margin:12px 0;
+}
+
+/* 体验指南 - 步骤 */
+.steps{list-style:none;padding:0;margin:0;counter-reset:step}
+.steps li{
+  counter-increment:step;position:relative;padding:0 0 14px 42px;font-size:13.8px;color:var(--ink-2);
+}
+.steps li::before{
+  content:counter(step);position:absolute;left:0;top:0;width:26px;height:26px;
+  background:var(--brand);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-size:12.5px;font-weight:700;
+}
+.steps li:not(:last-child)::after{
+  content:"";position:absolute;left:12.5px;top:28px;bottom:2px;width:1px;background:var(--line);
+}
+.steps b{color:var(--ink);display:block;margin-bottom:1px}
+
+/* FAQ */
+.faq details{
+  border:1px solid var(--line-soft);border-radius:var(--radius-sm);background:#fbfdfe;
+  margin-bottom:8px;overflow:hidden;
+}
+.faq details[open]{background:#fff;border-color:#cfe0ea}
+.faq summary{
+  cursor:pointer;padding:11px 14px;font-size:13.8px;font-weight:600;color:var(--ink);
+  list-style:none;position:relative;padding-right:34px;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{
+  content:"+";position:absolute;right:14px;top:50%;transform:translateY(-50%);
+  color:var(--brand-2);font-weight:700;font-size:16px;
+}
+.faq details[open] summary::after{content:"–"}
+.faq .ans{padding:0 14px 12px;font-size:13.3px;color:var(--ink-2)}
+
+/* 评论 */
+.reviews{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.review{
+  background:#f8fbfd;border:1px solid var(--line-soft);border-radius:var(--radius-sm);
+  padding:10px 12px;font-size:12.8px;color:var(--ink-2);
+}
+.review .who{display:flex;align-items:center;gap:7px;margin-bottom:5px}
+.review .avatar{
+  width:22px;height:22px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;
+  font-size:11px;font-weight:700;color:#fff;background:var(--brand-2);
+}
+.review .nick{font-size:12.5px;font-weight:600;color:var(--ink)}
+.review .stars{font-size:10.5px;color:var(--accent-2);letter-spacing:1px;margin-left:auto}
+
+/* 资讯 */
+.news-list{list-style:none;padding:0;margin:0}
+.news-list li{padding:9px 0;border-bottom:1px dashed var(--line-soft)}
+.news-list li:last-child{border-bottom:none}
+.news-list .n-head{display:flex;align-items:baseline;gap:10px;font-size:13.8px}
+.news-list .n-head a{font-weight:600;color:var(--ink)}
+.news-list .n-head a:hover{color:var(--brand-2);text-decoration:none}
+.news-list .date{font-size:11.5px;color:var(--muted);flex:none;font-variant-numeric:tabular-nums}
+.news-list .n-desc{font-size:12.5px;color:var(--muted);margin-top:2px}
+
+/* 相关推荐 */
+.rec-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.rec-item{
+  display:flex;align-items:center;gap:8px;font-size:13px;color:var(--ink-2);
+  background:#f7fafc;border:1px solid var(--line-soft);border-radius:var(--radius-sm);padding:8px 11px;
+}
+.rec-item:hover{background:#eef5f9;text-decoration:none;color:var(--brand)}
+.rec-item .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);flex:none}
+
+/* 时间线 */
+.timeline{list-style:none;padding:0;margin:0;position:relative}
+.timeline::before{content:"";position:absolute;left:5px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.timeline li{position:relative;padding:0 0 13px 22px;font-size:13.3px;color:var(--ink-2)}
+.timeline li::before{
+  content:"";position:absolute;left:0;top:6px;width:12px;height:12px;border-radius:50%;
+  background:#fff;border:2px solid var(--brand-2);
+}
+.timeline b{color:var(--ink);display:block;font-size:13.5px}
+.timeline .t-date{font-size:11.5px;color:var(--muted)}
+
+/* 右栏目录 */
+.toc-list{list-style:none;padding:0;margin:0}
+.toc-list li{margin-bottom:1px}
+.toc-list a{
+  display:block;font-size:12.8px;color:var(--ink-2);padding:5px 8px;border-radius:5px;
+  border-left:2px solid transparent;line-height:1.5;
+}
+.toc-list a:hover{background:#eef5f9;border-left-color:var(--accent);color:var(--brand);text-decoration:none}
+.hot-list{list-style:none;padding:0;margin:0;counter-reset:hot}
+.hot-list li{
+  counter-increment:hot;display:flex;gap:9px;padding:6px 0;font-size:12.8px;
+  border-bottom:1px dashed var(--line-soft);align-items:baseline;
+}
+.hot-list li:last-child{border-bottom:none}
+.hot-list li::before{
+  content:counter(hot);font-size:11px;font-weight:700;color:#fff;background:var(--muted);
+  width:16px;height:16px;border-radius:4px;display:flex;align-items:center;justify-content:center;flex:none;
+}
+.hot-list li:nth-child(1)::before{background:#d94f3d}
+.hot-list li:nth-child(2)::before{background:#e08b1f}
+.hot-list li:nth-child(3)::before{background:#c9a227}
+.hot-list a{color:var(--ink-2)}
+.hot-list a:hover{color:var(--brand);text-decoration:none}
+
+/* 页尾 */
+.site-footer{background:#0d2c40;color:#b9cfdd;font-size:13px}
+.footer-top{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:26px;padding:34px 0 26px}
+.footer-brand .brand-name{color:#fff;font-size:17px;margin-bottom:8px}
+.footer-brand p{font-size:12.5px;color:#93b0c2;line-height:1.7;margin:0}
+.footer-col h4{font-size:13px;color:#e9f3f9;margin-bottom:9px;letter-spacing:.5px}
+.footer-col ul{list-style:none;padding:0;margin:0}
+.footer-col li{margin-bottom:5px}
+.footer-col a{font-size:12.5px;color:#a7c2d2}
+.footer-col a:hover{color:#ffd98a;text-decoration:none}
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.12);padding:14px 0 22px;display:flex;
+  flex-wrap:wrap;gap:10px;justify-content:space-between;font-size:11.8px;color:#7f9cb0;
+}
+.footer-bottom .sample{color:#8fa9ba}
+
+/* 响应式 */
+@media (max-width:1120px){
+  .layout{grid-template-columns:170px minmax(0,1fr)}
+  .col-right{position:static;grid-column:1/-1;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:4px}
+  .col-right .side-block{margin-bottom:0}
+  .hero h1{font-size:30px}
+  .card-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-top{grid-template-columns:1fr 1fr}
+}
+@media (max-width:860px){
+  .hero-inner{grid-template-columns:1fr;gap:22px;padding:28px 0 30px}
+  .hero-visual{max-width:420px}
+  .hero h1{font-size:26px}
+  .header-nav{display:none}
+  .search-box input{width:140px}
+  .layout{grid-template-columns:1fr;gap:18px}
+  .col-left{position:static}
+  .col-left .side-block{margin-bottom:14px}
+  .channel-list{display:flex;flex-wrap:wrap;gap:6px}
+  .channel-list li{margin:0}
+  .channel-list a{background:#f1f6f9;border:1px solid var(--line-soft);font-size:12.5px;padding:5px 10px}
+  .col-right{grid-template-columns:1fr}
+  .card-grid{grid-template-columns:1fr}
+  .cat-grid{grid-template-columns:repeat(2,1fr)}
+  .reviews{grid-template-columns:1fr}
+  .rec-grid{grid-template-columns:1fr}
+  .intro-facts{grid-template-columns:1fr}
+  .up-list li{grid-template-columns:56px 1fr;gap:8px}
+  .up-list .badge{display:none}
+  .footer-top{grid-template-columns:1fr;gap:20px;padding:26px 0 18px}
+}
+@media (max-width:420px){
+  .brand-name{font-size:16px}
+  .search-box input{width:104px}
+  .hero h1{font-size:23px}
+  .hero-stats{gap:16px}
+  .section-head{flex-direction:column;align-items:flex-start;gap:2px}
+  .section-head .sub{white-space:normal}
+}
+</style>
+</head>
+<body>
+
+<div class="sticky-top">
+  <div class="notice-bar" role="region" aria-label="站内公告">
+    <div class="wrap">
+      <span class="notice-tag">更新</span>
+      <span class="notice-text">本周新增 <b>田径钻石联赛</b> 与 <b>游泳冠军赛</b> 全场回放 · 赛程速览每日 08:00 与 20:00 两次整理</span>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="/#top" aria-label="每日大赛视频在线观看 首页">
+        <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+          <rect width="64" height="64" rx="14" fill="#0f3b57"/>
+          <path d="M18 44V20h6v10l10-10h8L30 32l12 12h-8L24 34v10z" fill="#f5b642"/>
+          <circle cx="48" cy="18" r="4" fill="#ffd98a"/>
+        </svg>
+        <span class="brand-name">每日大赛视频在线观看</span>
+      </a>
+      <nav class="header-nav" aria-label="主题导航">
+        <a href="/#hot">赛事回放</a>
+        <a href="/#updates">赛程速览</a>
+        <a href="/#cats">项目分类</a>
+        <a href="/#deep">项目解读</a>
+        <a href="/#guide">观看指南</a>
+        <a href="/#faq">常见问答</a>
+        <a href="/#news">赛讯</a>
+      </nav>
+      <div class="header-tools">
+        <div class="search-box">
+          <label class="sr-only" for="q">站内搜索</label>
+          <input id="q" type="search" placeholder="搜索项目 / 赛事 / 选手" autocomplete="off">
+          <span class="s-icon" aria-hidden="true">🔍</span>
+          <div class="search-feedback" id="qFeedback" role="status" aria-live="polite"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+</div>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap hero-inner">
+      <div>
+        <span class="hero-kicker">Daily Games Replay</span>
+        <h1 id="hero-title">每日大赛视频在线观看</h1>
+        <p class="hero-desc">按项目、赛程与轮次整理的赛事回放入口，覆盖 <b>田径短跨</b>、<b>游泳决赛</b>、<b>球类小组赛</b> 与 <b>极限项目</b>。每场提供全场回放、集锦与关键分段，适合 <b>通勤追更</b>、<b>睡前补看</b> 与想确认 <b>哪轮更值得看</b> 的观众。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="/#hot">看今日回放</a>
+          <a class="btn btn-ghost" href="/#updates">查赛程速览</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat"><b>38</b>今日可看场次</div>
+          <div class="hero-stat"><b>12</b>项目分类</div>
+          <div class="hero-stat"><b>2</b>每日更新时段</div>
+          <div class="hero-stat"><b>4K</b>部分赛事画质</div>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <svg viewBox="0 0 420 300" role="presentation">
+          <defs>
+            <linearGradient id="track" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#f5b642" stop-opacity=".95"/>
+              <stop offset="1" stop-color="#e08b1f" stop-opacity=".75"/>
+            </linearGradient>
+          </defs>
+          <rect x="10" y="30" width="400" height="240" rx="16" fill="#0b2c40" stroke="#2b6a8d" stroke-opacity=".6"/>
+          <g stroke="#2b6a8d" stroke-opacity=".35">
+            <line x1="40" y1="86" x2="380" y2="86"/><line x1="40" y1="122" x2="380" y2="122"/>
+            <line x1="40" y1="158" x2="380" y2="158"/><line x1="40" y1="194" x2="380" y2="194"/>
+          </g>
+          <rect x="34" y="60" width="352" height="48" rx="8" fill="#123f5c"/>
+          <text x="50" y="90" fill="#cfe2ee" font-size="13" font-family="sans-serif">田径 · 男子 110 米栏决赛 · 全场回放</text>
+          <rect x="34" y="118" width="352" height="48" rx="8" fill="#123f5c"/>
+          <text x="50" y="148" fill="#cfe2ee" font-size="13" font-family="sans-serif">游泳 · 女子 200 米自由泳 · 分段集锦</text>
+          <rect x="34" y="176" width="352" height="48" rx="8" fill="#123f5c"/>
+          <text x="50" y="206" fill="#cfe2ee" font-size="13" font-family="sans-serif">球类 · 小组赛第 3 轮 · 关键球剪辑</text>
+          <circle cx="352" cy="238" r="20" fill="url(#track)"/>
+          <path d="M345 238l6 6 12-12" stroke="#33230a" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="34" y="248" fill="#8fb6cd" font-size="11" font-family="sans-serif">更新于 今日 20:00</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap layout">
+
+    <!-- 左栏 -->
+    <aside class="col-left" aria-label="频道与标签">
+      <div class="panel side-block">
+        <div class="side-title">频道导航</div>
+        <ul class="channel-list">
+          <li><a href="/#intro">内容简介 <span class="cnt">·</span></a></li>
+          <li><a href="/#hot">赛事回放 <span class="cnt">38</span></a></li>
+          <li><a href="/#updates">赛程速览 <span class="cnt">新</span></a></li>
+          <li><a href="/#cats">项目分类 <span class="cnt">12</span></a></li>
+          <li><a href="/#deep">项目解读</a></li>
+          <li><a href="/#guide">观看指南</a></li>
+          <li><a href="/#faq">常见问答</a></li>
+          <li><a href="/#reviews">观众评论</a></li>
+          <li><a href="/#news">赛事资讯</a></li>
+          <li><a href="/#recs">相关推荐</a></li>
+          <li><a href="/#timeline">更新节奏</a></li>
+        </ul>
+      </div>
+      <div class="panel side-block">
+        <div class="side-title">热门标签</div>
+        <div class="tag-cloud">
+          <a href="/#cats">田径短跨</a>
+          <a href="/#cats">游泳决赛</a>
+          <a href="/#cats">球类小组赛</a>
+          <a href="/#cats">极限项目</a>
+          <a href="/#updates">通勤追更</a>
+          <a href="/#updates">睡前补看</a>
+          <a href="/#faq">全场回放</a>
+          <a href="/#faq">分段集锦</a>
+          <a href="/#recs">决胜轮</a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- 中栏 -->
+    <div class="col-main">
+
+      <!-- 1 内容简介 -->
+      <section class="section" id="intro">
+        <div class="section-head">
+          <h2>内容简介：把一天的比赛按项目与轮次理清</h2>
+          <span class="sub">适合通勤追更与赛后补看</span>
+        </div>
+        <div class="card-panel intro-text">
+          <p><strong>每日大赛视频在线观看</strong>围绕一天内进行的各类赛事，把全场回放、关键分段与集锦按项目、轮次和时段整理成可逐条进入的观看入口。页面重点不在于堆叠场次，而是帮你在有限时间里判断：哪一轮是决胜轮、哪一场有强强对话、哪些场次只看集锦就够。</p>
+          <p>内容按 <strong>田径短跨</strong>、<strong>游泳决赛</strong>、<strong>球类小组赛</strong>、<strong>极限项目</strong> 等方向分区。每场回放给出项目名称、轮次、时长与看点摘要，方便你在 <strong>通勤追更</strong> 时用碎片时间看集锦，在 <strong>睡前补看</strong> 时选完整回放。对于 <strong>哪轮更值得看</strong> 这类犹豫，页面用轮次标记和关键分段提示给出判断依据。</p>
+          <p>赛程速览每天在早间与晚间各整理一次，标注开赛时段、场地与晋级关系。项目解读部分解释规则要点与判罚尺度，帮助初次接触某个项目的观众看懂比分与名次变化。常见问答则集中回应 <strong>全场回放和集锦怎么选</strong>、<strong>决赛一般多久出回放</strong> 等实际观看问题。</p>
+          <div class="intro-facts">
+            <div class="fact"><b>按轮次</b><span>预赛 / 半决赛 / 决赛分层</span></div>
+            <div class="fact"><b>按项目</b><span>12 类赛事方向入口</span></div>
+            <div class="fact"><b>按时段</b><span>早间与晚间两次整理</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2 热门内容推荐 -->
+      <section class="section" id="hot">
+        <div class="section-head">
+          <h2>今日赛事回放推荐</h2>
+          <span class="sub">按看点强度排序 · 示例数据</span>
+        </div>
+        <div class="card-grid">
+          <article class="v-card">
+            <span class="type">田径</span>
+            <h3><a href="/#hot">男子 110 米栏决赛全场回放</a></h3>
+            <p>起跑到第三栏的节奏变化是全场关键，最后两栏出现名次互换，适合看技术细节。</p>
+            <div class="tags"><span>短跨</span><span>决赛</span><span>技术流</span></div>
+            <div class="meta"><span class="hot">热度 9.6</span><span>时长 42 分钟</span></div>
+          </article>
+          <article class="v-card">
+            <span class="type">游泳</span>
+            <h3><a href="/#hot">女子 200 米自由泳决赛分段集锦</a></h3>
+            <p>前 100 米保守、后 100 米提速的配速对比，分段数据与转身细节一并呈现。</p>
+            <div class="tags"><span>自由泳</span><span>配速</span><span>分段</span></div>
+            <div class="meta"><span class="hot">热度 9.2</span><span>时长 18 分钟</span></div>
+          </article>
+          <article class="v-card">
+            <span class="type">球类</span>
+            <h3><a href="/#hot">小组赛第 3 轮关键球剪辑</a></h3>
+            <p>决定出线形势的三个回合单独抽出，含慢镜与站位示意，适合赛前补课。</p>
+            <div class="tags"><span>小组赛</span><span>出线形势</span><span>关键球</span></div>
+            <div class="meta"><span class="hot">热度 8.9</span><span>时长 12 分钟</span></div>
+          </article>
+          <article class="v-card">
+            <span class="type">极限</span>
+            <h3><a href="/#hot">攀岩速度赛决赛全程</a></h3>
+            <p>两条线路的起步选择差异明显，决赛轮出现一次抢跑判罚，规则要点附在片头。</p>
+            <div class="tags"><span>速度赛</span><span>判罚</span><span>规则</span></div>
+            <div class="meta"><span class="hot">热度 8.4</span><span>时长 26 分钟</span></div>
+          </article>
+          <article class="v-card">
+            <span class="type">田径</span>
+            <h3><a href="/#hot">女子跳远决赛六轮完整回顾</a></h3>
+            <p>前四轮领先者稳定，第五轮出现反超，最后一跳的踏板判定值得反复看。</p>
+            <div class="tags"><span>跳远</span><span>决胜轮</span><span>判罚</span></div>
+            <div class="meta"><span class="hot">热度 8.1</span><span>时长 55 分钟</span></div>
+          </article>
+          <article class="v-card">
+            <span class="type">游泳</span>
+            <h3><a href="/#hot">混合泳接力半决赛集锦</a></h3>
+            <p>四种泳姿交接顺序与换人策略是看点，含交接反应时的对比说明。</p>
+            <div class="tags"><span>接力</span><span>交接</span><span>半决赛</span></div>
+            <div class="meta"><span class="hot">热度 7.9</span><span>时长 15 分钟</span></div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 3 最新更新 -->
+      <section class="section" id="updates">
+        <div class="section-head">
+          <h2>赛程速览与最新更新</h2>
+          <span class="sub">示例时间 · 每日两次整理</span>
+        </div>
+        <div class="card-panel">
+          <ul class="up-list">
+            <li><span class="time">20:05</span><span class="name"><a href="/#updates">男子 110 米栏决赛回放上线</a></span><span class="badge">全场</span><span class="brief">含起跑反应时与分栏计时，片尾附技术要点。</span></li>
+            <li><span class="time">19:40</span><span class="name"><a href="/#updates">女子 200 米自由泳分段更新</a></span><span class="badge">集锦</span><span class="brief">新增前后 100 米配速对比条，便于判断体能分配。</span></li>
+            <li><span class="time">18:55</span><span class="name"><a href="/#updates">球类小组赛第 3 轮关键球</a></span><span class="badge">剪辑</span><span class="brief">三个决定出线的回合单独成段，附站位示意。</span></li>
+            <li><span class="time">17:30</span><span class="name"><a href="/#updates">攀岩速度赛决赛判罚说明</a></span><span class="badge">规则</span><span class="brief">抢跑判罚依据与重赛流程，用两分钟讲清。</span></li>
+            <li><span class="time">16:10</span><span class="name"><a href="/#updates">女子跳远决赛六轮完整版</a></span><span class="badge">全场</span><span class="brief">第五轮反超与最后一跳踏板判定逐帧呈现。</span></li>
+            <li><span class="time">14:45</span><span class="name"><a href="/#updates">混合泳接力半决赛交接分析</a></span><span class="badge">集锦</span><span class="brief">四种泳姿交接顺序对比，附反应时数据。</span></li>
+            <li><span class="time">12:20</span><span class="name"><a href="/#updates">上午场田径预赛速览</a></span><span class="badge">速览</span><span class="brief">六个小项的晋级名单与半决赛分组情况。</span></li>
+            <li><span class="time">10:05</span><span class="name"><a href="/#updates">游泳预赛成绩与晋级线</a></span><span class="badge">速览</span><span class="brief">按项目列出晋级线与并列处理方式。</span></li>
+            <li><span class="time">08:30</span><span class="name"><a href="/#updates">今日赛程总表更新</a></span><span class="badge">赛程</span><span class="brief">标注开赛时段、场地与可能的强强对话。</span></li>
+            <li><span class="time">08:00</span><span class="name"><a href="/#updates">早间回放入口整理</a></span><span class="badge">整理</span><span class="brief">按项目归类前一比赛日的全场与集锦。</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 4 分类入口 -->
+      <section class="section" id="cats">
+        <div class="section-head">
+          <h2>项目分类入口</h2>
+          <span class="sub">按你最常搜的项目名归类</span>
+        </div>
+        <div class="cat-grid">
+          <a class="cat-item" href="/#hot"><b>田径短跨</b><span>110 米栏 / 100 米栏</span></a>
+          <a class="cat-item" href="/#hot"><b>田径跳跃</b><span>跳远 / 三级跳 / 跳高</span></a>
+          <a class="cat-item" href="/#hot"><b>游泳决赛</b><span>自由泳 / 混合泳 / 接力</span></a>
+          <a class="cat-item" href="/#hot"><b>球类小组赛</b><span>循环赛 / 出线形势</span></a>
+          <a class="cat-item" href="/#hot"><b>球类淘汰赛</b><span>八强 / 半决赛 / 决赛</span></a>
+          <a class="cat-item" href="/#hot"><b>极限项目</b><span>攀岩 / 滑板 / 小轮车</span></a>
+          <a class="cat-item" href="/#hot"><b>力量项目</b><span>举重 / 投掷</span></a>
+          <a class="cat-item" href="/#hot"><b>综合赛程</b><span>多项目同日速览</span></a>
+        </div>
+      </section>
+
+      <!-- 5 深度解析 -->
+      <section class="section" id="deep">
+        <div class="section-head">
+          <h2>项目解读：看懂轮次、判罚与决胜逻辑</h2>
+          <span class="sub">约 800 字</span>
+        </div>
+        <div class="card-panel deep">
+          <h3>轮次决定观看顺序</h3>
+          <p>同一项目一天内往往要经历预赛、半决赛与决赛。预赛看的是晋级线与分组，半决赛看的是体力分配与道次，决赛才决定名次。时间有限时，先看决赛，再回看半决赛中出现的名次波动。</p>
+          <p>以短跨为例，预赛通常保留体力，成绩接近晋级线即可；半决赛开始出现全力跑，犯规与抢跑风险上升；决赛则集中在起跑反应与前三个栏的节奏。把这三轮分开看，比从头到尾顺序播放更容易抓住重点。</p>
+
+          <h3>判罚与规则要点</h3>
+          <p>田径短跨的抢跑判定、跳远的踏板越线、游泳的出发与转身犯规，都会直接改变名次。观看回放时，片头的规则提示值得先看一遍。</p>
+          <ul>
+            <li>短跨：起跑反应时低于判定阈值即判抢跑，重赛流程与名额处理需看清。</li>
+            <li>跳远：踏板越线以毫米级判定，最后一跳的改判常出现在决赛后段。</li>
+            <li>游泳：出发台与转身触壁的技术判定，接力交接的反应时同样计入。</li>
+            <li>球类：小组赛的出线规则涉及净胜分与相互战绩，关键球往往改变排序。</li>
+          </ul>
+          <div class="quote">判断一场比赛值不值得看完整回放，先看它是否影响晋级或名次；如果只是轮换阵容的场次，集锦通常已经覆盖关键信息。</div>
+
+          <h3>全场回放与集锦怎么选</h3>
+          <p>全场回放适合想看战术变化、体力分配与技术细节的观众；集锦适合通勤或睡前用十几分钟了解结果与关键节点。每日大赛视频在线观看把两者并列标注时长与看点，就是为了让你按可用时间做选择，而不是先点开再判断。</p>
+          <p>如果你关注的是某个具体选手，先看他所在轮次的完整回放；如果你关注的是项目整体格局，集锦加赛程速览的组合更省时间。对 <strong>哪类赛程更值得看</strong> 的犹豫，通常可以用“是否影响晋级”“是否出现名次互换”两个问题快速判断。</p>
+
+          <h3>不同项目的观看节奏</h3>
+          <p>田径项目节奏快、单场时长短，适合连续看多个小项；游泳决赛集中在短时间内完成，适合整段观看；球类小组赛单场时间长，更适合看关键球剪辑再决定是否补全场；极限项目的规则门槛较高，建议先看规则说明再看决赛。</p>
+          <p>把项目特点与自己的可用时间对上，是 <strong>每日大赛视频在线观看</strong> 这类入口最实际的用法：不是把所有场次都看完，而是用最少的播放时间覆盖当天最关键的比赛信息。</p>
+        </div>
+      </section>
+
+      <!-- 6 体验指南 -->
+      <section class="section" id="guide">
+        <div class="section-head">
+          <h2>观看指南：从赛程到回放的四个步骤</h2>
+          <span class="sub">按顺序操作更省时间</span>
+        </div>
+        <div class="card-panel">
+          <ol class="steps">
+            <li><b>先看赛程速览</b>确认当天有哪些项目进入决赛轮，标出可能影响名次的场次，避免在预赛上花太多时间。</li>
+            <li><b>用项目分类缩小范围</b>在田径短跨、游泳决赛、球类小组赛等入口中选择你关注的方向，卡片上的时长与看点帮助你决定看全场还是集锦。</li>
+            <li><b>按轮次标记排序</b>决赛与决胜轮优先，其次是有名次互换的半决赛；轮换阵容的场次可以只看关键球剪辑。</li>
+            <li><b>用站内搜索补充</b>输入项目名或选手名，可快速定位到对应回放条目；没有匹配结果时会给出提示，便于换词再查。</li>
+          </ol>
+          <p style="font-size:13.3px;color:var(--muted);margin:8px 0 0">在手机上，频道导航会折叠为横向标签，右栏的页内目录与热门条目移到正文之后，阅读顺序与桌面端保持一致。</p>
+        </div>
+      </section>
+
+      <!-- 7 FAQ -->
+      <section class="section" id="faq">
+        <div class="section-head">
+          <h2>常见问答</h2>
+          <span class="sub">围绕回放、轮次与观看选择</span>
+        </div>
+        <div class="card-panel faq">
+          <details open>
+            <summary>每日大赛视频在线观看一般多久更新一次回放？</summary>
+            <div class="ans">赛程速览每天早间与晚间各整理一次，决赛回放通常在比赛结束后的一至两小时内上线，预赛与半决赛以集锦和速览为主。具体时间以当天页面标注的更新时点为准。</div>
+          </details>
+          <details>
+            <summary>全场回放和分段集锦应该怎么选？</summary>
+            <div class="ans">想看战术变化、体力分配与技术细节，选全场回放；只想了解结果与关键节点，选集锦更省时间。卡片上标注了时长与看点，可以先按可用时间筛选，再决定是否补看全场。</div>
+          </details>
+          <details>
+            <summary>田径短跨决赛里，起跑反应时为什么会影响判罚？</summary>
+            <div class="ans">短跨项目对起跑反应有明确阈值，低于阈值会被判抢跑，进而影响名次甚至参赛资格。回放片头通常会给出本场的判定说明，配合慢镜可以看清起跑瞬间。</div>
+          </details>
+          <details>
+            <summary>球类小组赛的关键球剪辑能代替全场吗？</summary>
+            <div class="ans">如果只关心出线形势与比分变化，关键球剪辑基本够用；若想看出线规则中的净胜分与相互战绩细节，建议补看涉及出线权的完整半场。剪辑中会标注哪些回合改变了排序。</div>
+          </details>
+          <details>
+            <summary>极限项目的规则看不懂，从哪里开始看比较好？</summary>
+            <div class="ans">先看项目解读里的规则要点，再看决赛回放。攀岩速度赛的抢跑判罚、滑板的动作完成度评分，都有相对固定的判断标准，片头提示通常用一两分钟讲清。</div>
+          </details>
+          <details>
+            <summary>哪类赛程更值得看完整回放？</summary>
+            <div class="ans">影响晋级或名次的场次优先，例如决赛、决胜轮与出现名次互换的半决赛；轮换阵容或结果已定的场次，看集锦即可。用“是否影响晋级”“是否出现名次互换”两个问题判断，通常不会选错。</div>
+          </details>
+        </div>
+      </section>
+
+      <!-- 8 用户评论 -->
+      <section class="section" id="reviews">
+        <div class="section-head">
+          <h2>观众评论</h2>
+          <span class="sub">示例评论 · 昵称不重复</span>
+        </div>
+        <div class="card-panel">
+          <div class="reviews">
+            <div class="review"><div class="who"><span class="avatar">晨</span><span class="nick">晨跑的老周</span><span class="stars">★★★★★</span></div>短跨决赛的分栏计时很实用，通勤路上看集锦就能抓住重点。</div>
+            <div class="review"><div class="who"><span class="avatar">游</span><span class="nick">泳池边的阿岚</span><span class="stars">★★★★☆</span></div>自由泳分段对比做得清楚，就是希望决赛回放能再快一点上线。</div>
+            <div class="review"><div class="who"><span class="avatar">球</span><span class="nick">看台第三排</span><span class="stars">★★★★★</span></div>小组赛关键球剪辑帮我省了不少时间，出线形势一眼就看明白。</div>
+            <div class="review"><div class="who"><span class="avatar">岩</span><span class="nick">攀岩新手小林</span><span class="stars">★★★★☆</span></div>规则说明放在片头很友好，抢跑判罚终于看懂了。</div>
+            <div class="review"><div class="who"><span class="avatar">夜</span><span class="nick">夜读比赛的人</span><span class="stars">★★★★★</span></div>睡前补看决赛刚好，全场回放时长标注得比较准。</div>
+            <div class="review"><div class="who"><span class="avatar">田</span><span class="nick">田径场边小陈</span><span class="stars">★★★★☆</span></div>跳远最后一跳的踏板判定逐帧看很过瘾，希望能加上更多角度。</div>
+            <div class="review"><div class="who"><span class="avatar">速</span><span class="nick">速度与耐力</span><span class="stars">★★★★★</span></div>赛程速览每天两次更新，早上看一眼就知道晚上该看什么。</div>
+            <div class="review"><div class="who"><span class="avatar">耐</span><span class="nick">耐力型观众</span><span class="stars">★★★☆☆</span></div>项目挺全，但部分场次只有集锦没有全场，选择上会有点受限。</div>
+            <div class="review"><div class="who"><span class="avatar">跳</span><span class="nick">三级跳爱好者</span><span class="stars">★★★★★</span></div>分类入口按项目名来，找跳远和三级跳不用翻半天。</div>
+            <div class="review"><div class="who"><span class="avatar">接</span><span class="nick">接力赛观察员</span><span class="stars">★★★★☆</span></div>混合泳接力的交接反应时对比不错，能看出换人策略差异。</div>
+            <div class="review"><div class="who"><span class="avatar">判</span><span class="nick">规则控老许</span><span class="stars">★★★★★</span></div>判罚说明写得克制，没有过度解读，这点比较难得。</div>
+            <div class="review"><div class="who"><span class="avatar">地</span><span class="nick">地铁上看比赛</span><span class="stars">★★★★☆</span></div>手机端目录挪到正文后面，顺序不乱，碎片时间看很顺。</div>
+            <div class="review"><div class="who"><span class="avatar">滑</span><span class="nick">滑板少年阿泽</span><span class="stars">★★★★★</span></div>极限项目的规则门槛确实高，先看解读再看决赛省心很多。</div>
+            <div class="review"><div class="who"><span class="avatar">决</span><span class="nick">决胜轮收藏家</span><span class="stars">★★★★☆</span></div>按轮次分层这点很对胃口，决赛和半决赛分开看效率高。</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 9 相关资讯 -->
+      <section class="section" id="news">
+        <div class="section-head">
+          <h2>赛事资讯</h2>
+          <span class="sub">示例日期 · 主题相关</span>
+        </div>
+        <div class="card-panel">
+          <ul class="news-list">
+            <li>
+              <div class="n-head"><a href="/#news">短跨项目决赛轮次调整，起跑判定说明同步更新</a><span class="date">2025-03-18</span></div>
+              <div class="n-desc">本轮次安排变化后，回放片头的规则提示已补充起跑反应时阈值说明。</div>
+            </li>
+            <li>
+              <div class="n-head"><a href="/#news">游泳决赛分段数据上线，配速对比更直观</a><span class="date">2025-03-15</span></div>
+              <div class="n-desc">自由泳与混合泳项目新增前后半程配速条，便于判断体能分配。</div>
+            </li>
+            <li>
+              <div class="n-head"><a href="/#news">球类小组赛出线规则更新，关键球剪辑同步标注</a><span class="date">2025-03-11</span></div>
+              <div class="n-desc">净胜分与相互战绩的处理方式在剪辑中单独标注，避免误读排序。</div>
+            </li>
+            <li>
+              <div class="n-head"><a href="/#news">攀岩速度赛判罚流程说明发布</a><span class="date">2025-03-07</span></div>
+              <div class="n-desc">抢跑判罚与重赛流程用两分钟讲清，适合首次观看该项目的观众。</div>
+            </li>
+            <li>
+              <div class="n-head"><a href="/#news">田径跳跃项目踏板判定加入逐帧回看</a><span class="date">2025-03-03</span></div>
+              <div class="n-desc">跳远与三级跳的越线判定提供多角度慢镜，决赛后段改判更易理解。</div>
+            </li>
+            <li>
+              <div class="n-head"><a href="/#news">赛程速览改为每日两次整理</a><span class="date">2025-02-27</span></div>
+              <div class="n-desc">早间与晚间各一次，标注开赛时段、场地与可能的强强对话。</div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 10 相关推荐 -->
+      <section class="section" id="recs">
+        <div class="section-head">
+          <h2>相关推荐</h2>
+          <span class="sub">按观看需求延伸</span>
+        </div>
+        <div class="card-panel">
+          <div class="rec-grid">
+            <a class="rec-item" href="/#hot"><span class="dot"></span>短跨决赛技术细节回放</a>
+            <a class="rec-item" href="/#hot"><span class="dot"></span>自由泳后程提速分段</a>
+            <a class="rec-item" href="/#hot"><span class="dot"></span>小组赛出线关键球合集</a>
+            <a class="rec-item" href="/#hot"><span class="dot"></span>跳远决胜轮踏板判定</a>
+            <a class="rec-item" href="/#updates"><span class="dot"></span>通勤十分钟集锦清单</a>
+            <a class="rec-item" href="/#updates"><span class="dot"></span>睡前完整回放场次</a>
+            <a class="rec-item" href="/#deep"><span class="dot"></span>接力交接反应时对比</a>
+            <a class="rec-item" href="/#deep"><span class="dot"></span>极限项目规则入门</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 11 更新节奏时间线 -->
+      <section class="section" id="timeline">
+        <div class="section-head">
+          <h2>一天的更新节奏</h2>
+          <span class="sub">按比赛进程推进</span>
+        </div>
+        <div class="card-panel">
+          <ul class="timeline">
+            <li><b>早间整理</b><span class="t-date">08:00 前后</span>汇总前一比赛日回放，按项目归类，并发布当天赛程总表。</li>
+            <li><b>上午预赛</b><span class="t-date">10:00 前后</span>预赛成绩与晋级线先以速览形式呈现，晋级名单确认后补充集锦。</li>
+            <li><b>午间补充</b><span class="t-date">12:00 前后</span>上午场次的关键分段与判罚说明上线，便于午休时快速浏览。</li>
+            <li><b>下午半决赛</b><span class="t-date">15:00 前后</span>出现名次波动的半决赛优先更新，附体力分配与技术要点。</li>
+            <li><b>晚间决赛</b><span class="t-date">19:00 前后</span>决赛全场回放与集锦陆续上线，片头附规则提示与看点摘要。</li>
+            <li><b>夜间整理</b><span class="t-date">20:00 前后</span>当日回放入口二次归类，更新热度排序与相关推荐。</li>
+          </ul>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- 右栏 -->
+    <aside class="col-right" aria-label="辅助阅读">
+      <div class="panel side-block">
+        <div class="side-title">页内目录</div>
+        <ul class="toc-list">
+          <li><a href="/#intro">内容简介</a></li>
+          <li><a href="/#hot">今日赛事回放推荐</a></li>
+          <li><a href="/#updates">赛程速览与最新更新</a></li>
+          <li><a href="/#cats">项目分类入口</a></li>
+          <li><a href="/#deep">项目解读</a></li>
+          <li><a href="/#guide">观看指南</a></li>
+          <li><a href="/#faq">常见问答</a></li>
+          <li><a href="/#reviews">观众评论</a></li>
+          <li><a href="/#news">赛事资讯</a></li>
+          <li><a href="/#recs">相关推荐</a></li>
+          <li><a href="/#timeline">更新节奏</a></li>
+        </ul>
+      </div>
+      <div class="panel side-block">
+        <div class="side-title">热门条目</div>
+        <ol class="hot-list">
+          <li><a href="/#hot">男子 110 米栏决赛全场</a></li>
+          <li><a href="/#hot">女子 200 米自由泳分段</a></li>
+          <li><a href="/#hot">球类小组赛关键球剪辑</a></li>
+          <li><a href="/#hot">攀岩速度赛决赛全程</a></li>
+          <li><a href="/#hot">女子跳远决赛六轮</a></li>
+          <li><a href="/#hot">混合泳接力半决赛集锦</a></li>
+        </ol>
+      </div>
+      <div class="panel side-block">
+        <div class="side-title">延伸阅读</div>
+        <ul class="toc-list">
+          <li><a href="/#deep">短跨起跑判罚怎么看</a></li>
+          <li><a href="/#deep">游泳分段配速的意义</a></li>
+          <li><a href="/#deep">小组赛出线规则梳理</a></li>
+          <li><a href="/#guide">碎片时间看比赛顺序</a></li>
+          <li><a href="/#faq">决赛回放多久上线</a></li>
+        </ul>
+      </div>
+    </aside>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="brand-name">每日大赛视频在线观看</div>
+        <p>按项目、轮次与时段整理赛事回放入口，覆盖田径短跨、游泳决赛、球类小组赛与极限项目，帮助观众用有限时间抓住当天关键比赛。</p>
+      </div>
+      <div class="footer-col">
+        <h4>观看入口</h4>
+        <ul>
+          <li><a href="/#hot">赛事回放</a></li>
+          <li><a href="/#updates">赛程速览</a></li>
+          <li><a href="/#cats">项目分类</a></li>
+          <li><a href="/#recs">相关推荐</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>看懂比赛</h4>
+        <ul>
+          <li><a href="/#deep">项目解读</a></li>
+          <li><a href="/#guide">观看指南</a></li>
+          <li><a href="/#faq">常见问答</a></li>
+          <li><a href="/#timeline">更新节奏</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>社区与资讯</h4>
+        <ul>
+          <li><a href="/#reviews">观众评论</a></li>
+          <li><a href="/#news">赛事资讯</a></li>
+          <li><a href="/#intro">内容简介</a></li>
+          <li><a href="/#top">回到顶部</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 每日大赛视频在线观看 · 页面内容按主题整理</span>
+      <span class="sample">部分内容为示例数据，仅用于展示页面结构</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var input = document.getElementById('q');
+  var feedback = document.getElementById('qFeedback');
+  if(!input || !feedback) return;
+
+  var index = [];
+  document.querySelectorAll('.v-card h3, .up-list .name, .cat-item b, .hot-list a, .rec-item, .news-list .n-head a, .toc-list a').forEach(function(el){
+    var text = (el.textContent || '').replace(/\s+/g,' ').trim();
+    if(text) index.push({text:text.toLowerCase(), raw:text, el:el});
+  });
+
+  function run(){
+    var q = input.value.trim().toLowerCase();
+    if(!q){
+      feedback.classList.remove('show');
+      feedback.textContent = '';
+      return;
+    }
+    var hits = index.filter(function(item){ return item.text.indexOf(q) !== -1; });
+    feedback.classList.add('show');
+    if(!hits.length){
+      feedback.textContent = '没有找到匹配的条目，试试“短跨”“自由泳”“小组赛”等更短的关键词。';
+      return;
+    }
+    var names = hits.slice(0,3).map(function(h){ return h.raw; }).join(' / ');
+    feedback.textContent = '匹配 ' + hits.length + ' 条：' + names + (hits.length > 3 ? ' 等' : '');
+    var first = hits[0].el;
+    if(first && first.scrollIntoView){
+      first.scrollIntoView({behavior:'smooth', block:'center'});
+    }
+  }
+
+  var timer = null;
+  input.addEventListener('input', function(){
+    clearTimeout(timer);
+    timer = setTimeout(run, 260);
+  });
+  input.addEventListener('keydown', function(e){
+    if(e.key === 'Enter'){ e.preventDefault(); clearTimeout(timer); run(); }
+    if(e.key === 'Escape'){ input.value = ''; run(); }
+  });
+})();
+</script>
+
+</body>
+  </html>
